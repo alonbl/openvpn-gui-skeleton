@@ -1,0 +1,27 @@
+HKCR
+{
+	OpenVPNUI.Tunnel.1 = s 'Tunnel Class'
+	{
+		CLSID = s '{CB936AAD-E380-4748-A102-C5EA77625C0A}'
+	}
+	OpenVPNUI.Tunnel = s 'Tunnel Class'
+	{
+		CLSID = s '{CB936AAD-E380-4748-A102-C5EA77625C0A}'
+		CurVer = s 'OpenVPNUI.Tunnel.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CB936AAD-E380-4748-A102-C5EA77625C0A} = s 'Tunnel Class'
+		{
+			ProgID = s 'OpenVPNUI.Tunnel.1'
+			VersionIndependentProgID = s 'OpenVPNUI.Tunnel'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{AEAB8E6A-2DE5-44DE-B0CA-2A714BC75A4C}'
+		}
+	}
+}

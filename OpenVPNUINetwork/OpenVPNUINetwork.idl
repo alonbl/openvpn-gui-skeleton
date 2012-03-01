@@ -1,0 +1,39 @@
+// OpenVPNUINetwork.idl : IDL source for OpenVPNUINetwork
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (OpenVPNUINetwork.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(B0B1CB08-5F96-4F65-9B20-E462A17B0A10),
+	dual,
+	nonextensible,
+	helpstring("INetwork Interface"),
+	pointer_default(unique)
+]
+interface INetwork : IDispatch{
+	[id(1), helpstring("method GetIdentity")] HRESULT GetIdentity([out,retval] BSTR* User);
+	[id(2), helpstring("method CreateRoute")] HRESULT RouteCreate([in] LONG InterfaceIndex, [in] LONG Network, [in] LONG Netmask, [in] LONG Gateway);
+	[id(3), helpstring("method RouteDelete")] HRESULT RouteDelete([in] LONG InterfaceIndex, [in] LONG Network, [in] LONG Netmask, [in] LONG Gateway);
+};
+[
+	uuid(795695D5-D139-40A4-8AD6-C680F8675F7F),
+	version(1.0),
+	helpstring("OpenVPNUINetwork 1.0 Type Library")
+]
+library OpenVPNUINetworkLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(A6DBE7EF-93B6-46C0-A9E5-8CA7CC887C57),
+		helpstring("Network Class")
+	]
+	coclass Network
+	{
+		[default] interface INetwork;
+	};
+};

@@ -1,0 +1,27 @@
+HKCR
+{
+	OpenVPNUI.Network.1 = s 'Network Class'
+	{
+		CLSID = s '{A6DBE7EF-93B6-46C0-A9E5-8CA7CC887C57}'
+	}
+	OpenVPNUI.Network = s 'Network Class'
+	{
+		CLSID = s '{A6DBE7EF-93B6-46C0-A9E5-8CA7CC887C57}'
+		CurVer = s 'OpenVPNUI.Network.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A6DBE7EF-93B6-46C0-A9E5-8CA7CC887C57} = s 'Network Class'
+		{
+			ProgID = s 'OpenVPNUI.Network.1'
+			VersionIndependentProgID = s 'OpenVPNUI.Network'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{795695D5-D139-40A4-8AD6-C680F8675F7F}'
+		}
+	}
+}

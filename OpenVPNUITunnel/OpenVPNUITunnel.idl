@@ -1,0 +1,39 @@
+// OpenVPNUITunnel.idl : IDL source for OpenVPNUITunnel
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (OpenVPNUITunnel.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(1632AAD1-A4DF-48D6-B155-85AEB5E24FB2),
+	dual,
+	nonextensible,
+	helpstring("ITunnel Interface"),
+	pointer_default(unique)
+]
+interface ITunnel : IDispatch{
+	[id(1), helpstring("method GetIdentity")] HRESULT GetIdentity([out,retval] BSTR* User);
+	[id(2), helpstring("method RouteCreate")] HRESULT RouteCreate([in] LONG InterfaceIndex, [in] LONG Network, [in] LONG Netmask, [in] LONG Gateway);
+	[id(3), helpstring("method RouteDelete")] HRESULT RouteDelete([in] LONG InterfaceIndex, [in] LONG Network, [in] LONG Netmask, [in] LONG Gateway);
+};
+[
+	uuid(AEAB8E6A-2DE5-44DE-B0CA-2A714BC75A4C),
+	version(1.0),
+	helpstring("OpenVPNUITunnel 1.0 Type Library")
+]
+library OpenVPNUITunnelLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(CB936AAD-E380-4748-A102-C5EA77625C0A),
+		helpstring("Tunnel Class")
+	]
+	coclass Tunnel
+	{
+		[default] interface ITunnel;
+	};
+};

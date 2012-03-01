@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'OpenVPNUINetwork'
+		'OpenVPNUINetwork.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenVPNUINetwork", "OpenVPNUINetwork\OpenVPNUINetwork.vcproj", "{CF7BAA7E-58B7-469E-B04C-A3C5F1BEF7E9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenVPNUINetworkPS", "OpenVPNUINetwork\OpenVPNUINetworkPS.vcproj", "{456D43C3-58D9-4408-9E43-158564DD489E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF7BAA7E-58B7-469E-B04C-A3C5F1BEF7E9} = {CF7BAA7E-58B7-469E-B04C-A3C5F1BEF7E9}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenVPNUITunnel", "OpenVPNUITunnel\OpenVPNUITunnel.vcproj", "{4BBACFCD-020E-420B-8C03-342BFC27DC3B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF7BAA7E-58B7-469E-B04C-A3C5F1BEF7E9} = {CF7BAA7E-58B7-469E-B04C-A3C5F1BEF7E9}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenVPNUITunnelPS", "OpenVPNUITunnel\OpenVPNUITunnelPS.vcproj", "{81AE8533-119B-4A77-B5D2-2144EE103B71}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4BBACFCD-020E-420B-8C03-342BFC27DC3B} = {4BBACFCD-020E-420B-8C03-342BFC27DC3B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF7BAA7E-58B7-469E-B04C-A3C5F1BEF7E9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CF7BAA7E-58B7-469E-B04C-A3C5F1BEF7E9}.Debug|Win32.Build.0 = Debug|Win32
+		{CF7BAA7E-58B7-469E-B04C-A3C5F1BEF7E9}.Release|Win32.ActiveCfg = Release|Win32
+		{CF7BAA7E-58B7-469E-B04C-A3C5F1BEF7E9}.Release|Win32.Build.0 = Release|Win32
+		{456D43C3-58D9-4408-9E43-158564DD489E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{456D43C3-58D9-4408-9E43-158564DD489E}.Release|Win32.ActiveCfg = Release|Win32
+		{4BBACFCD-020E-420B-8C03-342BFC27DC3B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4BBACFCD-020E-420B-8C03-342BFC27DC3B}.Debug|Win32.Build.0 = Debug|Win32
+		{4BBACFCD-020E-420B-8C03-342BFC27DC3B}.Release|Win32.ActiveCfg = Release|Win32
+		{4BBACFCD-020E-420B-8C03-342BFC27DC3B}.Release|Win32.Build.0 = Release|Win32
+		{81AE8533-119B-4A77-B5D2-2144EE103B71}.Debug|Win32.ActiveCfg = Debug|Win32
+		{81AE8533-119B-4A77-B5D2-2144EE103B71}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
