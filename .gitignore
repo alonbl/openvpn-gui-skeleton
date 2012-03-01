@@ -1,0 +1,9 @@
+*.ncb
+*.suo
+Debug
+Release
+*.user
+*_i.c
+*_i.h
+*_p.c
+dlldata.c
